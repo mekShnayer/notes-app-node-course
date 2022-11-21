@@ -111,6 +111,11 @@ yargs.command({
     describe: 'list all notes',
     handler() {
         console.log('listing all notes')
+        notes.listNotes()
+        // notes.addNote(argv.title, argv.body)
+        // const noteTitle = chalk.green.bold(`title: ${argv.title} `)
+        // const noteBody = chalk.inverse.green(`body: ${argv.body}`)
+        // console.log(noteTitle, noteBody)
     }
 })
 //add, remove, read, list (notes)

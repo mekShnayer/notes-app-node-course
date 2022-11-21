@@ -47,12 +47,17 @@ const removeNote = (title) => {
         const message = chalk.green.inverse('note removed, remaining notes: ')
         console.log(message, filterNotes)
     }
-
-
+}
+const listingNotes = () => {
+    const notes = loadNotes();
+    notes.forEach(note => {
+        console.log('note:', chalk.bold.blue(note.title), chalk.blue.inverse(note.body))
+    });
 }
 
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
-    removeNote: removeNote
+    removeNote: removeNote,
+    listNotes: listingNotes
 }
